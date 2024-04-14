@@ -133,8 +133,8 @@ def get_operators(K1,K2,use_spsd=True):
         # create SPD Mean operator M
         K1 = K1 +np.eye(K1.shape[0])*np.core.finfo('float64').eps*2
         K2 = K2 +np.eye(K2.shape[0])*np.core.finfo('float64').eps*2
-		
-        eigValK1,eigVecK1 =np.linalg.eigh(K1)
+
+        eigValK1,eigVecK1 = np.linalg.eigh(K1)
         tol = calc_tol(eigValK1)
         rank_K1 = len(np.abs(eigValK1)[np.abs(eigValK1)>tol])
         
@@ -178,8 +178,8 @@ def ManiFeSt(X,y,kernel_scale_factor=1,use_spsd=True):
     idx = np.argsort(score, 0)[::-1]    
     
     ##eig_vecs
-    eigValM,eigVecM =np.linalg.eigh(M)
-    eigValD,eigVecD =np.linalg.eigh(D)
+    eigValM, eigVecM =np.linalg.eigh(M)
+    eigValD, eigVecD =np.linalg.eigh(D)
         
     sorted_indexes = np.argsort(np.abs(eigValM))[::-1]
     eigVecM = eigVecM[:,sorted_indexes]
