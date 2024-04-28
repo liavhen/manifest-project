@@ -25,7 +25,7 @@ class AdaBoost:
         pass
 
     def train(self):
-        for t in tqdm(range(self.T), 'Training AdaBoost'):
+        for t in range(self.T):
             incorrect_predictions = np.zeros_like(self.predictions[t])  # kxm: 1 iff weak_learner has missclassified, otherwise 0
             for j, h in enumerate(self.H):
                 self.predictions[t, j, :] = h(self.train_samples)
@@ -56,28 +56,4 @@ class AdaBoost:
 
     def get_losses(self):
         return self.train_loss, self.test_loss
-
-#
-# if __name__ == '__main__':
-#     train_data, train_labels, test_data, test_labels = utils.load_data()
-    #
-    # show_image(train_data, idx=0, fname='q2_example_train_image.png')
-    #
-    # num_of_weak_learners = 500
-    # T = 30
-    # weak_learners = []
-    # weak_learners.extend([above_threshold_classifier(j, 128) for j in np.random.randint(0, 28 * 28, num_of_weak_learners // 2)])
-    # weak_learners.extend([below_threshold_classifier(j, 128) for j in np.random.randint(0, 28 * 28, num_of_weak_learners // 2)])
-    #
-    # adaboost = AdaBoost(train_data, train_labels, test_data, test_labels, T, weak_learners)
-    # adaboost.train()
-    # train_loss, test_loss = adaboost.get_losses()
-    # plt.figure()
-    # plt.plot(train_loss, label='train_error')
-    # plt.plot(test_loss, label='test_error')
-    # plt.grid(True)
-    # plt.xlabel('Iteration (T)')
-    # plt.ylabel('Error Percentage')
-    # plt.legend()
-    # plt.savefig(f'q2_classification_error_{T}_iterations_{num_of_weak_learners}_weak_learners.png')
 

@@ -39,6 +39,7 @@ def show_image(gallery, idx, fname):
     reshaped = np.asarray(np.reshape(gallery[idx, :], (28, 28)))
     plt.imshow(reshaped, cmap='gray', vmin=0, vmax=255)
     plt.savefig(fname)
+    plt.close()
 
 
 def normalize(x):
@@ -54,8 +55,11 @@ def show_scores(score1, score1_title, score2, score2_title, nof_features, nof_sa
     relief_plt = ax2.imshow(score2.reshape(28, 28))
     fig.colorbar(relief_plt, ax=ax2)
     ax2.set_title(score2_title)
-    plt.savefig(f'plots/scores_visualization_{nof_features}_features{nof_samples}_samples.png')
+    save_name = f'plots/scores_visualization_{nof_samples}_samples.png'
+    # if not os.path.exists(save_name):
+    plt.savefig(save_name)
     plt.cla()
+    plt.close(fig)
 
 
 def plot_errors(train_error, test_error, fs_algorithm, adaboost_timesteps, nof_features, nof_samples):
@@ -71,4 +75,5 @@ def plot_errors(train_error, test_error, fs_algorithm, adaboost_timesteps, nof_f
     plt.legend()
     plt.savefig(f'plots/AdaBoost_{fs_algorithm}_{nof_features}_features_{nof_samples}_samples.png')
     plt.cla()
+    plt.close()
 

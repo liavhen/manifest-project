@@ -50,3 +50,11 @@ unicodedata2 @ file:///Users/runner/miniforge3/conda-bld/unicodedata2_1695848003
 urllib3==2.2.1
 Werkzeug==3.0.2
 wrapt==1.16.0
+
+pandas~=2.2.2
+numpy~=1.26.4
+matplotlib~=3.8.3
+scikit-learn~=1.4.1.post1
+tqdm~=4.66.2
+scipy~=1.12.0
+seaborn~=0.13.2
