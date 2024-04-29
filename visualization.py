@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -117,9 +116,9 @@ def compare_methods(df1, df2, settings='hard'):
 def main():
     # df = pd.read_csv("results.csv")
 
-    manifest_df = pd.read_csv("manifest_results.csv")
-    relief_df = pd.read_csv("relief_results.csv")
-    random_df = pd.read_csv("random_results.csv")
+    manifest_df = pd.read_csv("results/manifest_results.csv")
+    relief_df = pd.read_csv("results/relief_results.csv")
+    random_df = pd.read_csv("results/random_results.csv")
 
     manifest_df['mean_test_error'] = manifest_df.iloc[:, -10:].mean(axis=1)
     manifest_df['std_test_error'] = manifest_df.iloc[:, -10:].std(axis=1)

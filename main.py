@@ -1,12 +1,11 @@
 import utils
-from manifest import *
-from utils import *
-from adaboost import AdaBoost
+from utils.manifest import *
+from utils.adaboost import AdaBoost
 from tqdm import tqdm
-import logging, sys
+import logging
 import pandas as pd
-from relief import reliefF, feature_ranking
-
+from utils.relief import reliefF, feature_ranking
+from utils.utils import below_threshold_classifier, above_threshold_classifier
 
 def run_adaboost(data, adaboost_timesteps, weak_learners):
     adaboost = AdaBoost(data, T=adaboost_timesteps, weak_learners=weak_learners)
@@ -86,7 +85,7 @@ def main():
         nof_samples_range = []
         nof_selected_features_range = []
 
-    repeat = 10
+    repeat = 3
 
     manifest_results = dict()
     relief_results = dict()
@@ -145,9 +144,9 @@ def main():
                 relief_results[f'min_test_error_{i}'].append(relief_test_error[-1])
                 random_results[f'min_test_error_{i}'].append(random_test_error[-1])
 
-            pd.DataFrame.from_dict(manifest_results).to_csv(f"manifest_results{'_few_samples' if FEW_SAMPLES else ''}.csv")
-            pd.DataFrame.from_dict(relief_results).to_csv(f"relief_results{'_few_samples' if FEW_SAMPLES else ''}.csv")
-            pd.DataFrame.from_dict(random_results).to_csv(f"random_results{'_few_samples' if FEW_SAMPLES else ''}.csv")
+            pd.DataFrame.from_dict(manifest_results).to_csv(f"results/_manifest_results{'_few_samples' if FEW_SAMPLES else ''}.csv")
+            pd.DataFrame.from_dict(relief_results).to_csv(f"results/_relief_results{'_few_samples' if FEW_SAMPLES else ''}.csv")
+            pd.DataFrame.from_dict(random_results).to_csv(f"results/_random_results{'_few_samples' if FEW_SAMPLES else ''}.csv")
 
 
 if __name__ == '__main__':
