@@ -1,4 +1,4 @@
-# Classification with AdaBoost based on ManiFest Feature Selections
+# AdaBoost Classification based on ManiFest Feature Selections
 As part of "Mathematical Methods in Data Science" course, this project reviews the work “Few-Sample Feature Selection via Feature Manifold Learning”, by David Cohen, Tal Shnitzer, Yuval Kluger and Ronen Talmon. 
 The authors suggest a supervised algorithm to perform feature selection, termed “Manifest”. By using class labels, Manifest finds and scores the most discriminative features of the data, with respect to the different classes. In my project, I suggest examining the quality of the feature selection by constructing a weak-classifier based on each feature, and plugging it to AdaBoost, a learning algorithm that integrates multiple weak classifiers into a stronger classifier with boosted performance. This way, the classification error will be used to evaluate the algorithm. 
 In my work, I conduct a comparison between Manifest and another well-known supervised feature-selection algorithm ReliefF, which is considered state-of-the-art in the task of supervised feature selection. The experiments show that Manifest is indeed competitive with ReliefF, even with small number of training samples.
@@ -10,8 +10,11 @@ AdaBoost classification error based on features that were selected and proposed 
 3. Random selection of features
 
 The results exhibit the following dependency of the classification error in the number of selected features, or the number of observed training samples:
+
 ![img.png](img.png)
+
 ![img_1.png](img_1.png)
+
 ![img_2.png](img_2.png)
 
 Therefore, the following conclusions were made:
