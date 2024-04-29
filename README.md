@@ -11,11 +11,12 @@ AdaBoost classification error based on features that were selected and proposed 
 
 The results exhibit the following dependency of the classification error in the number of selected features, or the number of observed training samples:
 
-![img.png](img.png)
+<img width="493" alt="image" src="https://github.com/liavhen/manifest-project/assets/94541934/e835af82-edf8-462f-bfce-a407bc7050f2">
 
-![img_1.png](img_1.png)
+<img width="495" alt="image" src="https://github.com/liavhen/manifest-project/assets/94541934/b9658279-083a-42fc-8eda-7b8b644934bc">
 
-![img_2.png](img_2.png)
+<img width="501" alt="image" src="https://github.com/liavhen/manifest-project/assets/94541934/bc11e03b-220f-45c8-af54-0c9bd54e6c5e">
+
 
 Therefore, the following conclusions were made:
 1.	There is no doubt that employing algorithmic feature selection methods significantly enhances performance compared to random selection.
