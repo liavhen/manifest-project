@@ -11,7 +11,7 @@ AdaBoost classification error based on features that were selected and proposed 
 
 The results exhibit the following dependency of the classification error in the number of selected features, or the number of observed training samples:
 
-![img.png](img.png | width=400)
+![img.png](img.png)
 
 ![img_1.png](img_1.png)
 
