@@ -13,7 +13,9 @@ The results exhibit the following dependency of the classification error in the 
 
 <img width="493" alt="image" src="https://github.com/liavhen/manifest-project/assets/94541934/e835af82-edf8-462f-bfce-a407bc7050f2">
 
+
 <img width="495" alt="image" src="https://github.com/liavhen/manifest-project/assets/94541934/b9658279-083a-42fc-8eda-7b8b644934bc">
+
 
 <img width="501" alt="image" src="https://github.com/liavhen/manifest-project/assets/94541934/bc11e03b-220f-45c8-af54-0c9bd54e6c5e">
 
