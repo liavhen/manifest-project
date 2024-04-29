@@ -27,8 +27,8 @@ Random:
 Therefore, the following conclusions were made:
 1.	There is no doubt that employing algorithmic feature selection methods significantly enhances performance compared to random selection.
 2.	In this task, wrapped by AdaBoost, ReliefF achieves slightly better mean performance overall.
-3.	The decline in error for AdaBoost(Manifest) is less rapid with an increase in the number of features compared to AdaBoost(ReliefF). This suggests that Manifest identifies fewer features as discriminative. This deduction is supported by Figure 2, which illustrates that fewer features receive high scores in Manifest compared to ReliefF.
-4.	ReliefF appears to exhibit greater stability, as evidenced by its smaller variance in classification error compared to Manifest. This variance arises from the random selection of training samples in each experiment, as well as variations in their sizes across experiments. This deduction is supported by the narrower distributions of each "violin" plot in Figure 5 compared to those in Figure 6 (when taking into account the scale of the vertical axis).
+3.	The decline in error for AdaBoost(Manifest) is less rapid with an increase in the number of features compared to AdaBoost(ReliefF). This suggests that Manifest identifies fewer features as discriminative.
+4.	ReliefF appears to exhibit greater stability, as evidenced by its smaller variance in classification error compared to Manifest. This variance arises from the random selection of training samples in each experiment, as well as variations in their sizes across experiments. This deduction is supported by the narrower distributions of each "violin" plot of ReliefF compared to those of Manifest (when taking into account the scale of the vertical axis).
 
 Further details on the experiments, results and implementation details can be found in the code and in the documents under "docs" directory. 
 
